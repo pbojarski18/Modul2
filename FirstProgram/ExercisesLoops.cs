@@ -12,7 +12,7 @@ namespace FirstProgram
         public static void Exercise1()
         {
             //Napisz program, który sprawdzi ile jest liczb pierwszych w zakresie 0 – 100.
-            for (int i = 1; i < 100; i++)
+            for (int i = 0; i <= 100; i++)
             {
                 int divider = 0;
                 for (int j = 1; j <= i; j++)
