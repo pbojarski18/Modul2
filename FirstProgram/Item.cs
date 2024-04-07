@@ -12,29 +12,9 @@ namespace FirstProgram
 
         public string Name { get; set; }
 
-        public int Quantity { get; set; }
-
-        public DateTime CreateDate { get; set; }
-
-        public string CreatedBy { get; set; }
-
-        public ItemType ItemType { get; set; }
-
-        public Item(int id, string name, ItemType itemType)
-        {
-            Id = id;
-            Name = name;
-            ItemType = itemType;
-        }
-
-        public Item()
-        {
-            
-        }
+        public ItemCategory Category { get; set; }
     }
-
-
-    public enum ItemType
+    public enum ItemCategory
     {
         Food = 1,
         Equipment,

@@ -67,20 +67,30 @@ namespace FirstProgram
             Console.Write("Surname: ");
             string surname = Console.ReadLine();
 
-            Console.Write("Age: ");           
-            int.TryParse(Console.ReadLine(), out int realAge);
+            Console.Write("Age: ");
+            string age = Console.ReadLine();
+            int realAge;
+            int.TryParse(age, out realAge);
 
-            Console.Write("Gender: ");           
-            char.TryParse(Console.ReadLine(), out char realGender);
+            Console.Write("Gender: ");
+            string gender = Console.ReadLine();
+            char realGender;
+            char.TryParse(gender, out realGender);
 
-            Console.Write("Heigh: ");                    
-            double.TryParse(Console.ReadLine(), out double realHeight);
+            Console.Write("Heigh: ");
+            string height = Console.ReadLine();
+            double realHeight;
+            double.TryParse(height, out realHeight);
 
             Console.Write("Weight: ");
-            double.TryParse(Console.ReadLine(), out double realWeight);
+            string weight = Console.ReadLine();
+            double realWeight;
+            double.TryParse(weight, out realWeight);
 
             Console.Write("Phone Number: ");
-            long.TryParse(Console.ReadLine(), out long realPhoneNumber);
+            string phoneNumber = Console.ReadLine();
+            long realPhoneNumber;
+            long.TryParse(phoneNumber, out realPhoneNumber);
 
             Console.Write("E-mail address: ");
             string emailAddress = Console.ReadLine();

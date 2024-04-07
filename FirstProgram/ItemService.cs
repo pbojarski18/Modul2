@@ -29,36 +29,5 @@ namespace FirstProgram
             name = "New name";
             return item;
         }
-
-        public IEnumerable<Item> Seed()
-        {
-            List<Item> items = new List<Item>();
-            for (int i = 0; i<500; i++)
-            {
-                Item item = new Item()
-                {
-                    Id = i,
-                    Name = i.ToString(),
-                    Quantity = i * 100,
-                    CreateDate = DateTime.Now,
-                    CreatedBy = "Me"
-
-                };
-                items.Add(item);
-            }
-            return items;
-        }
-
-        public IQueryable<Item> GetAllItemsQueryable()
-        {
-            IQueryable<Item> items = Seed().AsQueryable();
-            return items;
-        }
-
-        public IEnumerable<Item> GetAllItemsEnumerable()
-        {
-            IEnumerable<Item> items = Seed();
-            return items;
-        }
     }
 }
