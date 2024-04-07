@@ -51,20 +51,34 @@ namespace FirstProgram
             Console.WriteLine("How many Fibonacci elements");
             int.TryParse(Console.ReadLine(), out int userInput);
 
-            int first = 0;
-            int second = 1;
-
-            Console.Write($"{first} {second} ");
-
-            for (int i = 0; i < userInput; i++)
+            if (userInput == 1)
             {
-                int nextNumber = first + second;
-                Console.Write($"{nextNumber} ");
+                Console.Write("0");
+            }
+            if (userInput == 2)
+            {
+                Console.Write("0 1");
+            }
+            if (userInput > 2)
+            {
 
-                first = second;
-                second = nextNumber;
+
+                int first = 0;
+                int second = 1;
+
+                Console.Write($"{first} {second} ");
+
+                for (int i = 2; i < userInput; i++)
+                {
+                    int nextNumber = first + second;
+                    Console.Write($"{nextNumber} ");
+
+                    first = second;
+                    second = nextNumber;
+                }
             }
         }
+
 
         public static void Exercise4()
         {
@@ -79,17 +93,28 @@ namespace FirstProgram
 
             int currentNumber = 1;
 
-            for (int i = 1; i <= userInput; i++)
+            for (int i = 1; currentNumber <= userInput; i++)
             {
                 for (int j = 1; j <= i; j++)
                 {
+
+
+                    if (currentNumber > userInput)
+                    {
+
+                        break;
+                    }
                     Console.Write($"{currentNumber} ");
                     currentNumber++;
+                    
                 }
+                
 
                 Console.WriteLine();
+
             }
         }
+
 
         public static void Exercise5()
         {
@@ -108,7 +133,7 @@ namespace FirstProgram
 
             for (int i = 1; i <= 20; i++)
             {
-                result = result + (1.0 / (double)i);
+                result += (1.0 / (double)i);
             }
             Console.WriteLine(result);
 
