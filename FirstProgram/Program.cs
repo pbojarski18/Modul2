@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics.Metrics;
+using System.Reflection;
+using System.Text;
 
 namespace FirstProgram
 {
 
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+
 
             //for (int a = 0; a < 10; a++)
             //{
@@ -99,7 +106,72 @@ namespace FirstProgram
             //int chosenOperation;
             //Int32.TryParse(operation, out chosenOperation);
 
-            HomeworkLoops.Exercise1();
+
+
+            //List<int> list = new List<int>();
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+
+            //Dictionary<int, Item> dictionary = new Dictionary<int, Item>();
+            //dictionary.Add(1, new Item(1, "Apple", ItemType.Food));
+            //dictionary.Add(2, new Item(2, "Strawberry", ItemType.Food));
+            //Item item;
+
+            //dictionary.TryGetValue(1, out item);
+
+
+            //SortedList<int, Item> sortedList = new SortedList<int, Item>();
+
+            //sortedList.Add(2, new Item(1, "Apple", ItemType.Food));
+            //sortedList.Add(1, new Item(2, "Strawberry", ItemType.Food));
+
+            //Queue<Item> queue = new Queue<Item>(); //FIFO -> first in first out
+            //queue.Enqueue(new Item(1, "Apple", ItemType.Food));
+            //queue.Enqueue(new Item(2, "Strawberry", ItemType.Food));
+
+            //queue.Dequeue(); // pierwszy wytypowany z kolejki do uzycia i usuniecia
+
+            //var queueItem = queue.Dequeue();
+            //var peekedItem = queue.Peek(); // podejrzenie pierwszego elementu i zwrocenie bez usuwania
+
+            //Stack<Item> stack = new Stack<Item>(); // LIFO -> last in first out
+            //stack.Push(new Item(1, "Apple", ItemType.Food));
+            //stack.Push(new Item(2, "Strawberry", ItemType.Food));
+
+            //var stackItem = stack.Pop(); // o samo co queue
+            //var peekedStackItem = stack.Peek(); // to samo co queue
+            //HomeworkLoops.Exercise3();
+
+            //Can you find the needle in the haystack?
+
+            //Write a function findNeedle() that takes an array full of junk but containing one "needle"
+
+            //After your function finds the needle it should return a message(as a string) that says:
+
+            //"found the needle at position " plus the index it found the needle, so:
+
+            //var haystack_1 = new object[] { '3', "123124234", null, "needle", "world", "hay", 2, '3', true, false };
+            //FindNeedle(haystack_1);
+            //static string FindNeedle(object[] haystack)
+            //{
+            //    for (int i = 0; i < haystack.Length; i++)
+            //    {
+            //        if (haystack[i] == "needle")
+            //        {
+            //            Console.WriteLine($"needle at position {i}");
+            //        }
+
+            //    }
+            //    return "needle not found";
+
+
+            //}
+            HomeworkLoops.Exercise4();
         }
     }
 }
+
+
+
+

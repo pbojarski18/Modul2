@@ -10,16 +10,12 @@ namespace FirstProgram
     {
         public static void Exercise1()
         {
-            Console.WriteLine("Enter 2 random numbers:");
-            string userInput = Console.ReadLine();
-            string userInput2 = Console.ReadLine();
-            int realNumber;
-            int realNumber2;
-            int.TryParse(userInput, out realNumber);
-            int.TryParse(userInput2, out realNumber2);
+            Console.WriteLine("Enter 2 random numbers:");           
+            int.TryParse(Console.ReadLine(), out int firstNumber);
+            int.TryParse(Console.ReadLine(), out int secondNumber);
 
 
-            if (realNumber == realNumber2)
+            if (firstNumber == secondNumber)
             {
                 Console.WriteLine("Numbers are equal");
             }
@@ -30,10 +26,8 @@ namespace FirstProgram
         }
         public static void Exercise2()
         {
-            Console.WriteLine("Enter random number:");
-            string userInput = Console.ReadLine();
-            int realNumber;
-            int.TryParse(userInput, out realNumber);
+            Console.WriteLine("Enter random number:");           
+            int.TryParse(Console.ReadLine(), out int realNumber);
 
             if (realNumber % 2 == 0)
             {
@@ -47,9 +41,7 @@ namespace FirstProgram
         public static void Exercise3()
         {
             Console.WriteLine("Enter random number");
-            string userInput = Console.ReadLine();
-            int realNumber;
-            int.TryParse(userInput, out realNumber);
+            int.TryParse(Console.ReadLine(), out int realNumber);
 
             if (realNumber >= 0)
             {
@@ -63,10 +55,8 @@ namespace FirstProgram
 
         public static void Exercise4()
         {
-            Console.WriteLine("Enter random year");
-            string userInput = Console.ReadLine();
-            int year;
-            int.TryParse(userInput, out year);
+            Console.WriteLine("Enter random year");          
+            int.TryParse(Console.ReadLine(), out int year);
 
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
             {
@@ -196,7 +186,7 @@ namespace FirstProgram
             Console.WriteLine("Enter your chemistry exam result");
             int.TryParse(Console.ReadLine(), out int chemistryResult);
 
-            if (mathsResult + physicsResult + chemistryResult > 180)
+            if (mathsResult + physicsResult + chemistryResult > 180 && physicsResult > 55 && chemistryResult > 45)
             {
                 Console.WriteLine("You're qualified");
             }
@@ -239,9 +229,7 @@ namespace FirstProgram
                     break;
                 case >= 40:
                     Console.WriteLine("wydupiam na alaske");
-                    break;
-                default:
-                    break;
+                    break;               
             }
 
         }
@@ -293,6 +281,7 @@ namespace FirstProgram
                     Console.WriteLine("celuj");
                     break;
                 default:
+                    Console.WriteLine("Wrong grade");
                     break;
 
             }
